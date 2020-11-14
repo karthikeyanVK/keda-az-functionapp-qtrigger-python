@@ -24,6 +24,7 @@ spec:
         app: {{ .Release.Name }}
     spec:
       containers:
+
       - env:
 {{- range $index, $functionName := .Values.functions }}
         - name: AzureFunctionsJobHost__functions__{{ $index }}
@@ -43,3 +44,10 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
+      nodeSelector:
+        kubernetes.io/role: agent
+        beta.kubernetes.io/os: linux
+        type: virtual-kubelet
+      tolerations:
+      - key: virtual-kubelet.io/provider
+        operator: Exists 
