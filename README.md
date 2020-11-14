@@ -10,6 +10,9 @@
    func kubernetes install --namespace  {namespace name}
    ```
 5. Make sure helm is installed in your system
-6. helm install queuetrigger ./KedaCharts --namespace {namespace name}
+6.  Deploy the queuetrigger function in kubernetes
+   ```
+     helm install queuetrigger ./KedaCharts --namespace {namespace name}
+   ```
 
 
