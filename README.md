@@ -12,7 +12,7 @@
 5. Make sure helm is installed in your system
 6.  Deploy the queuetrigger function in kubernetes
    ```
-     helm install queuetrigger ./KedaCharts --namespace {namespace name}
+     helm install queuetrigger ./KedaCharts 
    ```
 
 
