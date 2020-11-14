@@ -5,3 +5,11 @@
    kubectl create namespace keda
    helm install keda kedacore/keda --namespace keda
    ```
+4. Install func app for kubernetes
+   ```
+   func kubernetes install --namespace  {namespace name}
+   ```
+5. Make sure helm is installed in your system
+6. helm install queuetrigger ./KedaCharts --namespace {namespace name}
+
+
